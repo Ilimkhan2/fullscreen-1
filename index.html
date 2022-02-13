@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullscreen-1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="./img/image 50.png" class="banner">
+        <a href="#" class="logo"><img src="./img/isoft.png"></a>
+        <div class="toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="color_hover" data-text="Главная">Главная</a></li>
+                <li><a href="#portfolio" class="color_hover" data-text="Портфолио">Портфолио</a></li>
+                <li><a href="#shop" class="color_hover" data-text="Магазин">Магазин</a></li>
+                <li><a href="#about" class="color_hover" data-text="О нас">О нас</a></li>
+                <li><a href="#blog" class="color_hover" data-text="Блог">Блог</a></li>
+                <li><a href="#advice" class="color_hover" data-text="Наблюдательный совет">Наблюдательный совет</a></li>
+                <li><a href="#service" class="color_hover" data-text="Сервис">Сервис</a></li>
+                <li><a href="#contacts" class="color_hover" data-text="Контакты">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banne"></div>
+
+    <script>
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        const navigation = document.querySelector('nav');
+
+        document.querySelector('.toggle').onclick = function(){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
